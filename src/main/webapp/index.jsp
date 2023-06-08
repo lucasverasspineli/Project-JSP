@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<h1>Tela Inicial para testes!</h1>
-		<form action="">
+		<form action="ServletLogin" method="Post">
 		
 			<label>nome</label>
 			<input  name="nome">
