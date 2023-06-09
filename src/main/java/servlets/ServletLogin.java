@@ -19,8 +19,10 @@ public class ServletLogin extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println(request.getParameter("nome"));
-		System.out.println(request.getParameter("idade"));
+		String login = request.getParameter("Login");
+		String senha = request.getParameter("Senha");
+		
+		
 	}
 
 }

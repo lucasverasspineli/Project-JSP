@@ -10,10 +10,10 @@
 		<h1>Tela Inicial para testes!</h1>
 		<form action="ServletLogin" method="Post">
 		
-			<label>nome</label>
-			<input  name="nome">
-			<label>idade</label> 
-			<input name="idade">
+			<label>Login</label>
+			<input name="Login" type="text">
+			<label>Senha</label> 
+			<input name="Senha" type="Password">
 			<input type="submit" value="Enviar">
 		</form>
 		
