@@ -7,14 +7,39 @@
 		<title>Projeto JSP</title>
 	</head>
 	<body>
-		<h1>Tela Inicial para testes!</h1>
+		<h1>Projeto JSP!</h1>
 		<form action="ServletLogin" method="Post">
 		
-			<label>Login</label>
-			<input name="Login" type="text">
-			<label>Senha</label> 
-			<input name="Senha" type="Password">
-			<input type="submit" value="Enviar">
+			<table>
+				<tr>
+					<td>
+						<label>Login</label>
+					</td>				
+					<td>					
+						<input name="Login" type="text">
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<label>Senha</label>
+					</td>					
+					<td>		
+						<input name="Senha" type="Password">
+					</td>
+				</tr>
+			
+				<tr>
+					<td>
+					
+					</td>			
+					<td>
+						<input type="submit" value="Enviar">
+					</td>
+				</tr>
+				
+			</table>
+	
 		</form>
 		
 	</body>
