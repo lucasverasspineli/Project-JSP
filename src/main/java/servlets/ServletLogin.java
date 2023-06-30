@@ -4,12 +4,13 @@ import java.io.IOException;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import model.ModelLogin;
 
-
+@WebServlet(urlPatterns = {"/principal/ServletLogin"})
 public class ServletLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -40,8 +41,8 @@ public class ServletLogin extends HttpServlet {
 				RequestDispatcher redirec = request.getRequestDispatcher(url);
 				redirec.forward(request, response);
 				
-			} else {
-				RequestDispatcher redirec = request.getRequestDispatcher("index.jsp");
+			} else { // o /index.jsp serve para ele voltar para página, para voltar para o index!
+				RequestDispatcher redirec = request.getRequestDispatcher("/index.jsp");
 				request.setAttribute("msg", "Informou o login e senha errado");
 				redirec.forward(request, response);
 			}
