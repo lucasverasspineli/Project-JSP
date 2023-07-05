@@ -55,9 +55,9 @@ public class FilterAutenticar implements Filter {
 			} else {
 				chain.doFilter(request, response);
 			}
-			
+
 			connection.commit();
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
