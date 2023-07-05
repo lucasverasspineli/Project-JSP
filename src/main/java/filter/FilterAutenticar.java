@@ -60,6 +60,11 @@ public class FilterAutenticar implements Filter {
 
 		} catch (Exception e) {
 			e.printStackTrace();
+			
+			RequestDispatcher redirec = request.getRequestDispatcher("erro.jsp");
+			request.setAttribute("msg", e.getMessage());
+			redirec.forward(request, response);
+			
 		}
 		try {
 			connection.rollback();
