@@ -13,17 +13,17 @@
 
 <title>Projeto JSP</title>
 <style type="text/css">
-form{
+form {
 	position: absolute;
 	top: 40%;
 	left: 33%;
 }
+
 label {
 	color: #f2f2f2;
 }
 
 h2 {
-	
 	position: absolute;
 	color: #e7e7e7;
 	top: 30%;
@@ -40,23 +40,24 @@ h2 {
 }
 
 body {
-	background-color: #4E5180; 
+	background-color: #4E5180;
 }
-
 </style>
 </head>
 <body>
 	<h2>Tela de Login Projeto JSP</h2>
-	<form action="ServletLogin" method="Post" class="row g-3">
+	<form action="ServletLogin" method="Post"
+		class="row g-3 needs-validation" novalidate>
 		<input type="hidden" value=<%=request.getParameter("url")%> name="url">
 		<div class="col-md-6">
-			<b><label class="form-label">Login</label></b> <b><input class="form-control"
-				name="Login" type="text"></b>
+			<b><label class="form-label" for="Login">Login</label></b> <b><input
+				class="form-control" name="Login" id="Login" type="text" required></b>
 		</div>
 
 		<div class="col-md-6">
-			<b><label class="form-label">Senha</label></b> <b><input class="form-control"
-				name="Senha" type="Password"></b>
+			<b><label class="form-label" for="Senha">Senha</label></b> <b><input
+				class="form-control" name="Senha" id="Senha" type="Password"
+				required></b>
 		</div>
 		<input type="submit" class="btn btn-primary" value="Acessar">
 	</form>
@@ -66,5 +67,26 @@ body {
 		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
 		crossorigin="anonymous"></script>
 
+	<script type="text/javascript">
+	(() => {
+		  'use strict'
+
+		  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+		  const forms = document.querySelectorAll('.needs-validation')
+
+		  // Loop over them and prevent submission
+		  Array.from(forms).forEach(form => {
+		    form.addEventListener('submit', event => {
+		      if (!form.checkValidity()) {
+		        event.preventDefault()
+		        event.stopPropagation()
+		      }
+
+		      form.classList.add('was-validated')
+		    }, false)
+		  })
+		})()
+	
+	</script>
 </body>
 </html>
