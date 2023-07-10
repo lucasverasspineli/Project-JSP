@@ -32,11 +32,16 @@ h2 {
 
 .msg {
 	position: absolute;
-	top: 65%;
+	top: 80%;
 	left: 33%;
 	font-size: 20px;
 	font-family: inherit;
-	color: red;
+	color: #f3969f;
+	/* 	#df8f97 */
+/* background-color: #4c4497; */
+	border: #b6d4fe;
+
+	/* color: red; */
 }
 
 body {
@@ -49,12 +54,12 @@ body {
 	<form action="ServletLogin" method="Post"
 		class="row g-3 needs-validation" novalidate>
 		<input type="hidden" value=<%=request.getParameter("url")%> name="url">
-		<div class="col-md-6">
+		<div class="mb-3">
 			<b><label class="form-label" for="Login">Login</label></b> <b><input
 				class="form-control" name="Login" id="Login" type="text" required></b>
 		</div>
 
-		<div class="col-md-6">
+		<div class="mb-3">
 			<b><label class="form-label" for="Senha">Senha</label></b> <b><input
 				class="form-control" name="Senha" id="Senha" type="Password"
 				required></b>

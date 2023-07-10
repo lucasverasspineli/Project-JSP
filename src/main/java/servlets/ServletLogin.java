@@ -20,12 +20,12 @@ public class ServletLogin extends HttpServlet {
 	public ServletLogin() {
 
 	}
-
+	//Receber dados enviados pela url em parâmetros
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		doPost(request, response);
 	}
-
+	//Receber dados que são enviados de um formulário
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
